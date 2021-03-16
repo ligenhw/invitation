@@ -1,0 +1,26 @@
+{
+  "_id": "1",
+  "groom": {
+    "name": "李某某",
+    "tel": "13888888888"
+  },
+  "bride": {
+    "name": "周某某",
+    "tel": "13988888888"
+  },
+  "time": "2021-05-0x",
+  "address": {
+    "text": "xx省xx市xx宾馆",
+    "latitude": 40.457256,
+    "longitude": 124.06639
+  },
+  "poster": {
+    "img": "http://oss.bestlang.cn/invitation/user/1/CR2A7075.jpg",
+    "welcome": "欢迎各位莅临!"
+  },
+  "album": [
+    "http://oss.bestlang.cn/invitation/user/1/CR2A7075.jpg",
+    "http://oss.bestlang.cn/invitation/user/1/CR2A7075.jpg"
+  ],
+  "audio": "http://music.163.com/song/media/outer/url?id=1826162791.mp3"
+}
