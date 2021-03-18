@@ -1,5 +1,6 @@
 package cn.bestlang.invitation.exception;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,19 +15,20 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-rest-exceptions
  */
+@Slf4j
 @ControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler({BusinessException.class})
-    public final ResponseEntity<Object> handleBusinessException(BusinessException ex, WebRequest request) throws Exception {
+    public final ResponseEntity<Object> handleBusinessException(BusinessException ex, WebRequest request) {
         CommonErrorResp resp = new CommonErrorResp(ex.getCode(), ex.getMsg());
         HttpStatus status = HttpStatus.valueOf(ex.getStatus());
         return new ResponseEntity(resp, status);
     }
 
     @ExceptionHandler({Exception.class})
-    public final ResponseEntity<Object> handleAllException(Exception ex, HttpServletRequest request) throws Exception {
-        ex.printStackTrace();
+    public final ResponseEntity<Object> handleAllException(Exception ex, HttpServletRequest request) {
+        log.error("{}", ex);
 
         CommonErrorResp resp = new CommonErrorResp();
         resp.setMsg(ex.getMessage());
@@ -35,7 +37,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     protected ResponseEntity<Object> handleExceptionInternal(Exception ex, @Nullable Object body, HttpHeaders headers, HttpStatus status, WebRequest request) {
-        ex.printStackTrace();
+        log.error("{}", ex);
 
         CommonErrorResp resp = new CommonErrorResp();
         resp.setMsg(ex.getMessage());
