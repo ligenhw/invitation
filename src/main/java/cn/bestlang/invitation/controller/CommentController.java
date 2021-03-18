@@ -25,7 +25,7 @@ public class CommentController {
     public Page<Comment> queryComment(@PathVariable String topic,
                                       @RequestParam(defaultValue = "0") int page,
                                       @RequestParam(defaultValue = "10") int size) {
-
+        log.info("queryComment topic : {}", topic);
         return commentService.queryComments(topic, page, size);
     }
 
