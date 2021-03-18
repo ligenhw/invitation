@@ -3,3 +3,16 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/invitation
+  session:
+    store-type: redis
+    redis:
+      flush-mode: on_save
+      namespace: spring:session
+  redis:
+    host: localhost
+
+logging:
+  file:
+    name: invitation.log
+  level:
+    org.springframework.data.mongodb: INFO
