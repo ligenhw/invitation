@@ -10,7 +10,7 @@ public class SimpleSecurityContext {
         httpSession.setAttribute(AUTHENTICATION_KEY, authentication);
     }
 
-    public static Object getAuthentication(HttpSession httpSession) {
-        return httpSession.getAttribute(AUTHENTICATION_KEY);
+    public static String getAuthentication(HttpSession httpSession) {
+        return (String) httpSession.getAttribute(AUTHENTICATION_KEY);
     }
 }

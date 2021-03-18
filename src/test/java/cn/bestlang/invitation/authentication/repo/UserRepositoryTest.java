@@ -1,6 +1,9 @@
 package cn.bestlang.invitation.authentication.repo;
 
 import cn.bestlang.invitation.authentication.model.User;
+import cn.bestlang.invitation.authentication.model.UserFactory;
+import cn.bestlang.invitation.authentication.model.WxMiniOauthInfo;
+import cn.bestlang.invitation.authentication.model.WxMiniUserInfo;
 import cn.bestlang.invitation.util.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -18,6 +21,11 @@ class UserRepositoryTest {
 
     @Test
     void save() {
+        WxMiniUserInfo wxMiniUserInfo = new WxMiniUserInfo();
+        wxMiniUserInfo.setNickName("gen");
+        User user = UserFactory.createUser("123", wxMiniUserInfo);
+
+        userRepository.insert(user);
     }
 
     @Test

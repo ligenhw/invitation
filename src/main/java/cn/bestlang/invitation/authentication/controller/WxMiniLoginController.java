@@ -28,10 +28,10 @@ public class WxMiniLoginController {
         SimpleSecurityContext.saveAuthentication(httpSession, user.getId());
     }
 
-    @GetMapping("/mlogin")
-    public void mlogin(HttpSession httpSession) {
-        log.info("mlogin");
+    @GetMapping("/mlogin/{userId}")
+    public void mlogin(HttpSession httpSession, @PathVariable String userId) {
+        log.info("mlogin userId : {}", userId);
 
-        SimpleSecurityContext.saveAuthentication(httpSession, "1");
+        SimpleSecurityContext.saveAuthentication(httpSession, userId);
     }
 }
