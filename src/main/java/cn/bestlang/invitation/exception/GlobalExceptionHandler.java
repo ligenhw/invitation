@@ -26,6 +26,8 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler({Exception.class})
     public final ResponseEntity<Object> handleAllException(Exception ex, HttpServletRequest request) throws Exception {
+        ex.printStackTrace();
+
         CommonErrorResp resp = new CommonErrorResp();
         resp.setMsg(ex.getMessage());
         HttpStatus status = getStatus(request);
@@ -33,6 +35,8 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     protected ResponseEntity<Object> handleExceptionInternal(Exception ex, @Nullable Object body, HttpHeaders headers, HttpStatus status, WebRequest request) {
+        ex.printStackTrace();
+
         CommonErrorResp resp = new CommonErrorResp();
         resp.setMsg(ex.getMessage());
         return new ResponseEntity(resp, headers, status);

@@ -7,7 +7,7 @@ spring:
     store-type: redis
     redis:
       flush-mode: on_save
-      namespace: spring:session
+      namespace: invitation:spring:session
   redis:
     host: localhost
 

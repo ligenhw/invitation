@@ -1,9 +1,12 @@
 {
   "_id": "1",
+  "nickName": "gen",
+  "avatarUrl": "https://profile.csdnimg.cn/A/7/3/3_sunnyzyq",
   "wxMiniOauthInfo": {
     "openId": "123",
     "wxMiniUserInfo": {
-      "nickName": "gen"
+      "nickName": "gen",
+      "avatarUrl": "https://profile.csdnimg.cn/A/7/3/3_sunnyzyq"
     }
   }
 }
