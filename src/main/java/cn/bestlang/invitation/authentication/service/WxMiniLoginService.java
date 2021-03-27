@@ -4,6 +4,7 @@ import cn.bestlang.invitation.authentication.api.AuthCode2SessionResp;
 import cn.bestlang.invitation.authentication.api.WxApi;
 import cn.bestlang.invitation.authentication.model.*;
 import cn.bestlang.invitation.authentication.repo.UserRepository;
+import cn.bestlang.invitation.util.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,6 +33,8 @@ public class WxMiniLoginService {
 
         if (user == null) {
             user = UserFactory.createUser(openid, wxMiniUserInfo);
+            user = userRepository.insert(user);
+            log.info("create user : {}", JsonUtil.toJson(user));
         }
 
         return user;
