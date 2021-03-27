@@ -22,5 +22,8 @@
     "http://oss.bestlang.cn/invitation/user/1/CR2A7075.jpg",
     "http://oss.bestlang.cn/invitation/user/1/CR2A7075.jpg"
   ],
-  "audio": "http://music.163.com/song/media/outer/url?id=1826162791.mp3"
+  "audio": {
+    "name": "今天你要嫁给我",
+    "url": "http://music.163.com/song/media/outer/url?id=5254811.mp3"
+  }
 }

@@ -1,21 +1,17 @@
 package cn.bestlang.invitation.repo;
 
-import cn.bestlang.invitation.model.Address;
-import cn.bestlang.invitation.model.Person;
-import cn.bestlang.invitation.model.Poster;
-import cn.bestlang.invitation.model.Wedding;
+import cn.bestlang.invitation.base.BaseTest;
+import cn.bestlang.invitation.model.*;
 import cn.bestlang.invitation.util.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
-@SpringBootTest
-class WeddingRepositoryTest {
+class WeddingRepositoryTest extends BaseTest {
 
     @Autowired
     private WeddingRepository weddingRepository;
@@ -52,7 +48,10 @@ class WeddingRepositoryTest {
         album.add("http://oss.bestlang.cn/invitation/user/1/CR2A7075.jpg");
         wedding.setAlbum(album);
 
-        wedding.setAudio("http://music.163.com/song/media/outer/url?id=1826162791.mp3");
+        Audio audio = new Audio();
+        audio.setName("今天你要嫁给我");
+        audio.setUrl("http://music.163.com/song/media/outer/url?id=5254811.mp3");
+        wedding.setAudio(audio);
 
         Wedding weddingResult = weddingRepository.insert(wedding);
 

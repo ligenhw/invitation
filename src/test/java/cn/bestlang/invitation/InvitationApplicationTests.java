@@ -1,10 +1,9 @@
 package cn.bestlang.invitation;
 
+import cn.bestlang.invitation.base.BaseTest;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class InvitationApplicationTests {
+class InvitationApplicationTests extends BaseTest {
 
 	@Test
 	void contextLoads() {
