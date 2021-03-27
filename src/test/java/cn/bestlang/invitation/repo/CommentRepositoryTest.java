@@ -1,5 +1,6 @@
 package cn.bestlang.invitation.repo;
 
+import cn.bestlang.invitation.base.BaseTest;
 import cn.bestlang.invitation.model.Comment;
 import cn.bestlang.invitation.model.UserBaseInfo;
 import lombok.extern.slf4j.Slf4j;
@@ -12,8 +13,7 @@ import java.time.LocalDateTime;
 import static org.junit.jupiter.api.Assertions.*;
 
 @Slf4j
-@SpringBootTest
-class CommentRepositoryTest {
+class CommentRepositoryTest extends BaseTest {
 
     @Autowired
     private CommentRepository commentRepository;

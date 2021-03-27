@@ -16,5 +16,5 @@ public class Wedding extends AbstractDocument {
 
     private Poster poster; // 海报
     private List<String> album; // 相册
-    private String audio; // 背景音频
+    private Audio audio; // 音频
 }

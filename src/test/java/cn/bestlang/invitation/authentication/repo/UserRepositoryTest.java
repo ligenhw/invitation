@@ -2,19 +2,15 @@ package cn.bestlang.invitation.authentication.repo;
 
 import cn.bestlang.invitation.authentication.model.User;
 import cn.bestlang.invitation.authentication.model.UserFactory;
-import cn.bestlang.invitation.authentication.model.WxMiniOauthInfo;
 import cn.bestlang.invitation.authentication.model.WxMiniUserInfo;
+import cn.bestlang.invitation.base.BaseTest;
 import cn.bestlang.invitation.util.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @Slf4j
-@SpringBootTest
-class UserRepositoryTest {
+class UserRepositoryTest extends BaseTest {
 
     @Autowired
     private UserRepository userRepository;

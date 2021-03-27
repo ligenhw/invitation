@@ -7,6 +7,9 @@ import org.springframework.web.client.RestTemplate;
 @Slf4j
 public class WxApi {
 
+    /**
+     * https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/login/auth.code2Session.html
+     */
     private static final String URL_AUTH_CODE2SESSION = "https://api.weixin.qq.com/sns/jscode2session?appid=%s&secret=%s&js_code=%s&grant_type=authorization_code";
 
     public WxApi(String appId, String appSecret, RestTemplate restTemplate) {
