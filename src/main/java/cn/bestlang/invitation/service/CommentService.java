@@ -22,7 +22,7 @@ public class CommentService {
 
     public Page<Comment> queryComments(String topic, int page, int size) {
         PageRequest pageRequest = PageRequest.of(page, size);
-        Page<Comment> commentPage = commentRepository.findAllByTopic(topic, pageRequest);
+        Page<Comment> commentPage = commentRepository.findAllByTopicOrderByTimeDesc(topic, pageRequest);
 
         return commentPage;
     }
