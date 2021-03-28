@@ -7,4 +7,5 @@ public class Audio {
 
     private String name;
     private String url;
+    private Boolean autoPlay;
 }
