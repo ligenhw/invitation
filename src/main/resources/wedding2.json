@@ -1,0 +1,29 @@
+{
+  "_id": "2",
+  "groom": {
+    "name": "贾某某",
+    "tel": "13188888888"
+  },
+  "bride": {
+    "name": " 王某某",
+    "tel": "13288888888"
+  },
+  "time": "2022-05-0x",
+  "address": {
+    "text": "xx省xx市xx宾馆",
+    "latitude": 40.457256,
+    "longitude": 124.06639
+  },
+  "poster": {
+    "img": "https://img0.baidu.com/it/u=3364464570,618986436&fm=26&fmt=auto&gp=0.jpg",
+    "welcome": "欢迎各位莅临!"
+  },
+  "album": [
+    "https://img0.baidu.com/it/u=3364464570,618986436&fm=26&fmt=auto&gp=0.jpg",
+    "https://img0.baidu.com/it/u=3364464570,618986436&fm=26&fmt=auto&gp=0.jpg"
+  ],
+  "audio": {
+    "name": "今天你要嫁给我",
+    "url": "http://music.163.com/song/media/outer/url?id=5254811.mp3"
+  }
+}

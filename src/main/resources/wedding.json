@@ -24,6 +24,7 @@
   ],
   "audio": {
     "name": "今天你要嫁给我",
-    "url": "http://music.163.com/song/media/outer/url?id=5254811.mp3"
+    "url": "http://music.163.com/song/media/outer/url?id=5254811.mp3",
+    "autoPlay": false
   }
 }
