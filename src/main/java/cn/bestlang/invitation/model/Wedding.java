@@ -9,6 +9,8 @@ import java.util.List;
 @Document
 public class Wedding extends AbstractDocument {
 
+    private String userId; // 创建者用户id
+
     private Person groom; // 新郎
     private Person bride; // 新娘
     private String time; // 时间

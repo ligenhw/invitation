@@ -15,16 +15,20 @@
     "longitude": 124.06639
   },
   "poster": {
-    "img": "http://oss.bestlang.cn/invitation/user/1/CR2A7075.jpg",
+    "img": "http://oss.bestlang.cn/invitation/wedding/1/CR2A7075.jpg",
     "welcome": "欢迎各位莅临!"
   },
   "album": [
-    "http://oss.bestlang.cn/invitation/user/1/CR2A7075.jpg",
-    "http://oss.bestlang.cn/invitation/user/1/CR2A7075.jpg"
+    "http://oss.bestlang.cn/invitation/wedding/1/CR2A7125.jpg",
+    "http://oss.bestlang.cn/invitation/wedding/1/CR2A7159.jpg",
+    "http://oss.bestlang.cn/invitation/wedding/1/CR2A7232.jpg",
+    "http://oss.bestlang.cn/invitation/wedding/1/CR2A7085.jpg",
+    "http://oss.bestlang.cn/invitation/wedding/1/CR2A7080.jpg",
+    "http://oss.bestlang.cn/invitation/wedding/1/CR2A6922.jpg"
   ],
   "audio": {
     "name": "今天你要嫁给我",
     "url": "http://music.163.com/song/media/outer/url?id=5254811.mp3",
-    "autoPlay": false
+    "autoPlay": true
   }
 }

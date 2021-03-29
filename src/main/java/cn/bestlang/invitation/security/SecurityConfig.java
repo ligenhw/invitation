@@ -11,6 +11,8 @@ public class SecurityConfig {
     public UrlMatcher urlMatcher() {
         SimpleUrlMatcher simpleUrlMatcher = new SimpleUrlMatcher();
         simpleUrlMatcher.addPathPattern("/invitation/comment", HttpMethod.POST);
+        simpleUrlMatcher.addPathPattern("/invitation/wedding", HttpMethod.GET);
+        simpleUrlMatcher.addPathPattern("/invitation/wedding", HttpMethod.POST);
 
         return simpleUrlMatcher;
     }
