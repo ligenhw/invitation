@@ -7,6 +7,8 @@ public class BusinessException extends RuntimeException {
     private String msg; // 错误消息
 
     public BusinessException(ErrorCode errorCode, Object... args) {
+        super(String.format(errorCode.getMsg(), args));
+
         status = errorCode.getStatus();
         code = errorCode.getCode();
         msg = String.format(errorCode.getMsg(), args);

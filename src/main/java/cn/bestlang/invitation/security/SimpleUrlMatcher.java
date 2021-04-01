@@ -24,18 +24,17 @@ public class SimpleUrlMatcher implements UrlMatcher {
          patterns.add(mvcPattern);
     }
 
-    @Override
     public boolean match(HttpServletRequest request) {
-         for(MvcPattern mvcPattern : patterns) {
-             String pattern = mvcPattern.getPattern();
-             String method = mvcPattern.getMethod().name();
-             if (pathMatcher.match(pattern, getRequestPath(request))) {
-                 if (method != null) {
-                     return request.getMethod().equals(method);
-                 }
-                 return true;
-             }
-         }
+        for(MvcPattern mvcPattern : patterns) {
+            String pattern = mvcPattern.getPattern();
+            String method = mvcPattern.getMethod().name();
+            if (pathMatcher.match(pattern, getRequestPath(request))) {
+                if (method != null && !request.getMethod().equals(method)) {
+                    continue;
+                }
+                return true;
+            }
+        }
         return false;
     }
 
