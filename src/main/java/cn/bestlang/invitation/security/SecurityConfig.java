@@ -13,6 +13,7 @@ public class SecurityConfig {
         simpleUrlMatcher.addPathPattern("/invitation/comment", HttpMethod.POST);
         simpleUrlMatcher.addPathPattern("/invitation/wedding", HttpMethod.GET);
         simpleUrlMatcher.addPathPattern("/invitation/wedding", HttpMethod.POST);
+        simpleUrlMatcher.addPathPattern("/invitation/user", HttpMethod.GET);
 
         return simpleUrlMatcher;
     }
