@@ -44,4 +44,10 @@ public class WeddingController {
 
         return weddingRepository.findAllByUserId(userId);
     }
+
+    @DeleteMapping("/{weddingId}")
+    public void deleteWedding(@PathVariable String weddingId) {
+        log.info("deleteWedding weddingId : {}", weddingId);
+        weddingRepository.deleteById(weddingId);
+    }
 }
