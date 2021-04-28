@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.session.web.http.SessionRepositoryFilter;
 import org.springframework.stereotype.Component;
+import org.springframework.web.cors.CorsUtils;
 import org.springframework.web.filter.GenericFilterBean;
 
 import javax.servlet.*;
@@ -30,7 +31,8 @@ public class SimpleFilterSecurityInterceptor extends GenericFilterBean {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
-        if (!requiresAuthentication(request)) {
+        // 跳过预检请求
+        if (!requiresAuthentication(request) || CorsUtils.isPreFlightRequest(request)) {
             chain.doFilter(request, response);
             return;
         }
