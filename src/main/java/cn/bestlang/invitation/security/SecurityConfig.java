@@ -14,6 +14,7 @@ public class SecurityConfig {
         simpleUrlMatcher.addPathPattern("/invitation/wedding", HttpMethod.GET);
         simpleUrlMatcher.addPathPattern("/invitation/wedding", HttpMethod.POST);
         simpleUrlMatcher.addPathPattern("/invitation/user", HttpMethod.GET);
+        simpleUrlMatcher.addPathPattern("/invitation/gift", null);
 
         return simpleUrlMatcher;
     }

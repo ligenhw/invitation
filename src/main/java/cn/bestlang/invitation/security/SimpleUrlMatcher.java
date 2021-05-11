@@ -18,18 +18,19 @@ public class SimpleUrlMatcher implements UrlMatcher {
 
     @Override
     public void addPathPattern(String pathPattern, HttpMethod method) {
-         MvcPattern mvcPattern = new MvcPattern();
-         mvcPattern.setPattern(pathPattern);
-         mvcPattern.setMethod(method);
-         patterns.add(mvcPattern);
+        MvcPattern mvcPattern = new MvcPattern();
+        mvcPattern.setPattern(pathPattern);
+        mvcPattern.setMethod(method);
+        patterns.add(mvcPattern);
     }
 
+    @Override
     public boolean match(HttpServletRequest request) {
         for(MvcPattern mvcPattern : patterns) {
             String pattern = mvcPattern.getPattern();
-            String method = mvcPattern.getMethod().name();
+            HttpMethod httpMethod = mvcPattern.getMethod();
             if (pathMatcher.match(pattern, getRequestPath(request))) {
-                if (method != null && !request.getMethod().equals(method)) {
+                if (httpMethod != null && !request.getMethod().equals(httpMethod.name())) {
                     continue;
                 }
                 return true;
@@ -52,7 +53,7 @@ public class SimpleUrlMatcher implements UrlMatcher {
 
     @Data
     private static class MvcPattern {
-         private String pattern;
-         private HttpMethod method;
+        private String pattern;
+        private HttpMethod method;
     }
 }
