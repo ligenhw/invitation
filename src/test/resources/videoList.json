@@ -1,0 +1,16 @@
+{
+  "_id": "1",
+  "title": "5月x日-婚礼全程回顾",
+  "videos": [
+    {
+      "title":"婚礼-上集",
+      "url":"xx.mp4",
+      "poster":"xx.jpg"
+    },
+    {
+      "title":"婚礼-下集",
+      "url":"cc.mp4",
+      "poster":"cc.jpg"
+    }
+  ]
+}
