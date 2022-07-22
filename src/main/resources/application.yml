@@ -16,3 +16,8 @@ logging:
     name: invitation.log
   level:
     org.springframework.data.mongodb: DEBUG
+
+management:
+  endpoints:
+    web:
+      base-path: /invitation/actuator
